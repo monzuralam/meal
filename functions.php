@@ -49,24 +49,24 @@ function meal_assets(){
     wp_enqueue_style('main', get_theme_file_uri().'/assets/css/style.css', null, '1.0', 'all');
     wp_enqueue_style('style', get_stylesheet_uri() );
 
-    wp_enqueue_script('maps-api', '//maps.googleapis.com/maps/api/js', array(), '1.0', true);
-    wp_enqueue_script('aos', get_theme_file_uri().'/assets/js/aos.js', array(), '1.0', true);
-    wp_enqueue_script('bootstrap-datepicker', get_theme_file_uri().'/assets/js/bootstrap-datepicker.js', array(), '1.0', true);
-    wp_enqueue_script('bootstrap', get_theme_file_uri().'/assets/js/bootstrap.min.js', array(), '1.0', true);
-    wp_enqueue_script('imagesloaded', get_theme_file_uri().'/assets/js/imagesloaded.js', array(), '1.0', true);
-    wp_enqueue_script('isotope.pkgd', get_theme_file_uri().'/assets/js/isotope.pkgd.min.js', array(), '1.0', true);
+    wp_enqueue_script('maps-api', '//maps.googleapis.com/maps/api/js', array('jquery'), '1.0', true);
+    wp_enqueue_script('aos', get_theme_file_uri().'/assets/js/aos.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('bootstrap-datepicker', get_theme_file_uri().'/assets/js/bootstrap-datepicker.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('bootstrap', get_theme_file_uri().'/assets/js/bootstrap.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('imagesloaded', get_theme_file_uri().'/assets/js/imagesloaded.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('isotope.pkgd', get_theme_file_uri().'/assets/js/isotope.pkgd.min.js', array('jquery'), '1.0', true);
     wp_enqueue_script('jquery');
-    wp_enqueue_script('jquery.easing', get_theme_file_uri().'/assets/js/jquery.easing.1.3.js', array(), '1.0', true);
-    wp_enqueue_script('jquery.isotope', get_theme_file_uri().'/assets/js/jquery.isotope.js', array(), '1.0', true);
-    wp_enqueue_script('jquery.magnific-popup', get_theme_file_uri().'/assets/js/jquery.magnific-popup.min.js', array(), '1.0', true);
-    wp_enqueue_script('jquery.stellar', get_theme_file_uri().'/assets/js/jquery.stellar.min.js', array(), '1.0', true);
-    wp_enqueue_script('jquery.timepicker', get_theme_file_uri().'/assets/js/jquery.timepicker.min.js', array(), '1.0', true);
-    wp_enqueue_script('jquery.waypoints', get_theme_file_uri().'/assets/js/jquery.waypoints.min.js', array(), '1.0', true);
-    wp_enqueue_script('magnific-popup-options', get_theme_file_uri().'/assets/js/magnific-popup-options.js', array(), '1.0', true);
-    wp_enqueue_script('owl.carousel', get_theme_file_uri().'/assets/js/owl.carousel.min.js', array(), '1.0', true);
-    wp_enqueue_script('popper', get_theme_file_uri().'/assets/js/popper.min.js', array(), '1.0', true);
-    wp_enqueue_script('portfolio', get_theme_file_uri().'/assets/js/portfolio.js', array(), '1.0', true);
-    wp_enqueue_script('main', get_theme_file_uri().'/assets/js/main.js', array(), '1.0', true);
+    wp_enqueue_script('jquery.easing', get_theme_file_uri().'/assets/js/jquery.easing.1.3.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('jquery.isotope', get_theme_file_uri().'/assets/js/jquery.isotope.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('jquery.magnific-popup', get_theme_file_uri().'/assets/js/jquery.magnific-popup.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('jquery.stellar', get_theme_file_uri().'/assets/js/jquery.stellar.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('jquery.timepicker', get_theme_file_uri().'/assets/js/jquery.timepicker.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('jquery.waypoints', get_theme_file_uri().'/assets/js/jquery.waypoints.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('magnific-popup-options', get_theme_file_uri().'/assets/js/magnific-popup-options.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('owl.carousel', get_theme_file_uri().'/assets/js/owl.carousel.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('popper', get_theme_file_uri().'/assets/js/popper.min.js', array('jquery'), '1.0', true);
+    wp_enqueue_script('portfolio', get_theme_file_uri().'/assets/js/portfolio.js', array('jquery','imagesloaded','jquery.magnific-popup'), '1.0', true);
+    wp_enqueue_script('main', get_theme_file_uri().'/assets/js/main.js', array('jquery'), '1.0', true);
 }
 add_action('wp_enqueue_scripts','meal_assets');
 
